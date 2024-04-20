@@ -19,7 +19,7 @@ if wav_files:
         with sr.AudioFile(selected_file) as source:
             audio = r.record(source)
         try:
-            print(r.recognize_sphinx(audio))
+            print(r.recognize_sphinx(audio)) # recognize_google (online solution with Google engine)
         except sr.UnknownValueError:
             print("Could not understand audio")
         except sr.RequestError as e:
